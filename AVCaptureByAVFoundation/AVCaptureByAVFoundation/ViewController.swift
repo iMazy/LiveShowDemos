@@ -11,30 +11,28 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    fileprivate var captureSession: AVCaptureSession!
+    fileprivate var captureSession: AVCaptureSession?
     fileprivate var videoOutput: AVCaptureVideoDataOutput?
     fileprivate var videoInput: AVCaptureDeviceInput?
-    fileprivate var previewLayer: AVCaptureVideoPreviewLayer!
+    fileprivate var previewLayer: AVCaptureVideoPreviewLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // 创建捕捉会话（AVCaptureSession）
         captureSession = AVCaptureSession()
-        
+
         // 设置视频输入源&输出源
-//         - 输入源（AVCaptureDeviceInput）：从摄像头输入
-//         - 输出源（AVCaptureVideoDataOutput）：可以设置代理，在代理方法中拿到数据
-//         - 将输入&输出添加到会话中
         setupVideoInputOutput()
-        
+
         // 设置音频输入源&输出源
         setupAudioInputOutput()
-        
+
         // 添加预览图层
         setupPreviewLayer()
-        
+
         // 开始采集即可
-        captureSession.startRunning()
+        captureSession?.startRunning()
     }
     
     /// 设置视频输入源&输出源
@@ -44,6 +42,7 @@ class ViewController: UIViewController {
         
         // 取出所有的设备
         guard let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as? [AVCaptureDevice] else { return }
+        
         // 过滤出前置摄像头
         guard let device = devices.filter({ $0.position == .front }).first else { return }
         // 创建输入设备
@@ -56,11 +55,13 @@ class ViewController: UIViewController {
         self.videoOutput = output
         
         // 添加输入输出设备
-        if captureSession.canAddInput(input) {
-            captureSession.addInput(input)
-        }
-        if captureSession.canAddOutput(output) {
-            captureSession.addOutput(output)
+        if let session = captureSession {
+            if session.canAddInput(input) {
+                session.addInput(input)
+            }
+            if session.canAddOutput(output) {
+                session.addOutput(output)
+            }
         }
     }
     
@@ -76,15 +77,17 @@ class ViewController: UIViewController {
         output.setSampleBufferDelegate(self, queue: DispatchQueue.global())
         
         // 添加输入输出设备
-        if captureSession.canAddInput(input) {
-            captureSession.addInput(input)
-        }
-        if captureSession.canAddOutput(output) {
-            captureSession.addOutput(output)
+        if let session = captureSession {
+            if session.canAddInput(input) {
+                session.addInput(input)
+            }
+            if session.canAddOutput(output) {
+                session.addOutput(output)
+            }
         }
     }
     
-    /// 添加预览图层（可选）
+    /// 添加预览图层
     func setupPreviewLayer() {
         guard let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession) else { return }
         previewLayer.frame = view.bounds
@@ -93,19 +96,30 @@ class ViewController: UIViewController {
     }
     
     /// 转换摄像头
-    func rotateCamera() {
+    func switchCamera() {
+        
+        // 添加切换动画
+        let rotaionAnim = CATransition()
+        rotaionAnim.type = "oglFlip"
+        rotaionAnim.subtype = "fromLeft"
+        rotaionAnim.duration = 0.25
+        view.layer.add(rotaionAnim, forKey: nil)
+        
         // 获取当前设备的的摄像头方向
         guard let videoInput = videoInput else { return }
+        // 获取当前摄像头方向 并切换
         let position: AVCaptureDevicePosition = videoInput.device.position == .front ? .back : .front
         guard let devices = (AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as? [AVCaptureDevice]) else { return }
         guard let device = devices.filter({ $0.position == position }).first else { return }
         guard let newInput = try? AVCaptureDeviceInput(device: device) else { return }
         
-        // 开启配置
-        captureSession.beginConfiguration()
-        captureSession.removeInput(videoInput)
-        captureSession.addInput(newInput)
-        captureSession.commitConfiguration()
+        /// 开启配置
+        // 开始配置
+        captureSession?.beginConfiguration()
+        captureSession?.removeInput(videoInput)
+        captureSession?.addInput(newInput)
+        // 结束配置
+        captureSession?.commitConfiguration()
         
         // 记录最新的 input
         self.videoInput = newInput
@@ -114,8 +128,12 @@ class ViewController: UIViewController {
     
     /// 停止音视频采集
     func stopCapturing() {
-        captureSession.stopRunning()
-        self.previewLayer.removeFromSuperlayer()
+        // 先移除预览视图
+        self.previewLayer?.removeFromSuperlayer()
+        // 停止视频采集
+        captureSession?.stopRunning()
+        // 置空 session
+        captureSession = nil
     }
     
     @IBAction func stopCapture() {
@@ -124,11 +142,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func translateCamera(_ sender: UIButton) {
-        rotateCamera()
+        switchCamera()
     }
     
 }
 
+
+// MARK: - AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate {
     func captureOutput(_ captureOutput: AVCaptureOutput!, didDrop sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         if self.videoOutput?.connection(withMediaType: AVMediaTypeVideo) == connection {
