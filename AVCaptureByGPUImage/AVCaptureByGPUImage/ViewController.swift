@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         
         // 设置视频才采集的画面样式 - 竖屏
         videoCamera.outputImageOrientation = .portrait
-        
+
         // 添加滤镜（如果不添加滤镜，无法看到图像）
         videoCamera.addTarget(filter)
-        
+
         // 设置代理，监听采集到的视频
         videoCamera.delegate = self
-        
+
         // 设置并添加用于实时显示画面的GPUImageView
         gpuImageView = GPUImageView(frame: view.bounds)
         if let gpuImageView = gpuImageView {
@@ -38,8 +38,8 @@ class ViewController: UIViewController {
             // 给显示画面添加滤镜
             filter.addTarget(gpuImageView)
         }
-        
-        
+
+
         // 开始采集视频
         videoCamera.startCapture()
     }
@@ -101,8 +101,9 @@ class ViewController: UIViewController {
     
 }
 
+
+// MARK: - GPUImageVideoCameraDelegate
 extension ViewController: GPUImageVideoCameraDelegate {
-    
     // output video sampleBuffer
     func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
         print("采集到画面")
