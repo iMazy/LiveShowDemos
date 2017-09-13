@@ -12,9 +12,11 @@
 		2188B29D1F68C2790063AD0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2188B29B1F68C2790063AD0F /* Main.storyboard */; };
 		2188B29F1F68C2790063AD0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2188B29E1F68C2790063AD0F /* Assets.xcassets */; };
 		2188B2A21F68C2790063AD0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2188B2A01F68C2790063AD0F /* LaunchScreen.storyboard */; };
+		BD81E076A2B46EE0A25EA65A /* Pods_AVCaptureByGPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7329ADBBBA5E9902A966A8 /* Pods_AVCaptureByGPUImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FF81FC5943AD9C5A106FA0E /* Pods-AVCaptureByGPUImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCaptureByGPUImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVCaptureByGPUImage/Pods-AVCaptureByGPUImage.debug.xcconfig"; sourceTree = "<group>"; };
 		2188B2941F68C2790063AD0F /* AVCaptureByGPUImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCaptureByGPUImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2188B2971F68C2790063AD0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2188B2991F68C2790063AD0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		2188B29E1F68C2790063AD0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2188B2A11F68C2790063AD0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2188B2A31F68C2790063AD0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62C4DCA37D6DE188FA3ECB31 /* Pods-AVCaptureByGPUImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCaptureByGPUImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVCaptureByGPUImage/Pods-AVCaptureByGPUImage.release.xcconfig"; sourceTree = "<group>"; };
+		CB7329ADBBBA5E9902A966A8 /* Pods_AVCaptureByGPUImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCaptureByGPUImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD81E076A2B46EE0A25EA65A /* Pods_AVCaptureByGPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2188B2961F68C2790063AD0F /* AVCaptureByGPUImage */,
 				2188B2951F68C2790063AD0F /* Products */,
+				5F2431C6EFC76CBD7DFCF034 /* Pods */,
+				6C3A19284C658B41B948899D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = AVCaptureByGPUImage;
 			sourceTree = "<group>";
 		};
+		5F2431C6EFC76CBD7DFCF034 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FF81FC5943AD9C5A106FA0E /* Pods-AVCaptureByGPUImage.debug.xcconfig */,
+				62C4DCA37D6DE188FA3ECB31 /* Pods-AVCaptureByGPUImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C3A19284C658B41B948899D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB7329ADBBBA5E9902A966A8 /* Pods_AVCaptureByGPUImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2188B2A61F68C2790063AD0F /* Build configuration list for PBXNativeTarget "AVCaptureByGPUImage" */;
 			buildPhases = (
+				3617F1F6570C93CDCD67E15E /* [CP] Check Pods Manifest.lock */,
 				2188B2901F68C2790063AD0F /* Sources */,
 				2188B2911F68C2790063AD0F /* Frameworks */,
 				2188B2921F68C2790063AD0F /* Resources */,
+				D6CE7DA109C3BF468297AEB9 /* [CP] Embed Pods Frameworks */,
+				15553DB111D2A2BB8B93F221 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +123,7 @@
 				TargetAttributes = {
 					2188B2931F68C2790063AD0F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CSR7UB94J4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +158,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15553DB111D2A2BB8B93F221 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVCaptureByGPUImage/Pods-AVCaptureByGPUImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3617F1F6570C93CDCD67E15E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVCaptureByGPUImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6CE7DA109C3BF468297AEB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AVCaptureByGPUImage/Pods-AVCaptureByGPUImage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVCaptureByGPUImage/Pods-AVCaptureByGPUImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2188B2901F68C2790063AD0F /* Sources */ = {
@@ -260,9 +342,12 @@
 		};
 		2188B2A71F68C2790063AD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF81FC5943AD9C5A106FA0E /* Pods-AVCaptureByGPUImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CSR7UB94J4;
 				INFOPLIST_FILE = AVCaptureByGPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mazy.AVCaptureByGPUImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +357,12 @@
 		};
 		2188B2A81F68C2790063AD0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C4DCA37D6DE188FA3ECB31 /* Pods-AVCaptureByGPUImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CSR7UB94J4;
 				INFOPLIST_FILE = AVCaptureByGPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mazy.AVCaptureByGPUImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +389,7 @@
 				2188B2A81F68C2790063AD0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
