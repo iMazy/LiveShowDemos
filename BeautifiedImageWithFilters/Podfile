@@ -1,0 +1,10 @@
+
+platform :ios, '9.0'
+
+target 'BeautifiedImageWithFilters' do
+
+use_frameworks!
+
+pod "GPUImage"
+
+end
