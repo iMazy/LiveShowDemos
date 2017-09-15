@@ -1,0 +1,10 @@
+
+platform :ios, '8.0'
+
+target 'BeautyCamera' do
+
+use_frameworks!
+
+pod "GPUImage"
+
+end

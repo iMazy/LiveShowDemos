@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeautyCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8o-pI-ZPC">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-S8-CSX">
+                                        <rect key="frame" x="170" y="43.5" width="35" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="拍照">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0y-Dd-fyf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoN-Ts-uDb">
+                                        <rect key="frame" x="305" y="43.5" width="50" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Rotate">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rotateCameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hp-9X-R45"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OK-Vx-0yr">
+                                        <rect key="frame" x="20" y="43.5" width="49" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Album">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="albumAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QL4-WK-Tl0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.31747645547945208" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6OK-Vx-0yr" firstAttribute="leading" secondItem="b8o-pI-ZPC" secondAttribute="leading" constant="20" id="6u6-QT-beG"/>
+                                    <constraint firstAttribute="height" constant="120" id="PdR-B4-bD1"/>
+                                    <constraint firstItem="DoN-Ts-uDb" firstAttribute="centerY" secondItem="b8o-pI-ZPC" secondAttribute="centerY" id="Urk-mu-3Wy"/>
+                                    <constraint firstItem="f7c-S8-CSX" firstAttribute="centerY" secondItem="b8o-pI-ZPC" secondAttribute="centerY" id="Wf4-ni-56f"/>
+                                    <constraint firstItem="f7c-S8-CSX" firstAttribute="centerX" secondItem="b8o-pI-ZPC" secondAttribute="centerX" id="Yhv-5W-BJU"/>
+                                    <constraint firstAttribute="trailing" secondItem="DoN-Ts-uDb" secondAttribute="trailing" constant="20" id="eSN-O8-MRY"/>
+                                    <constraint firstItem="6OK-Vx-0yr" firstAttribute="centerY" secondItem="b8o-pI-ZPC" secondAttribute="centerY" id="iab-a3-eRc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b8o-pI-ZPC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BT9-CY-DNi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b8o-pI-ZPC" secondAttribute="bottom" id="XYe-ax-nM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8o-pI-ZPC" secondAttribute="trailing" id="lK6-Cj-KUY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
