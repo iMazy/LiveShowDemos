@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,37 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nc3-S4-5Um">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nc3-S4-5Um">
                                 <rect key="frame" x="54" y="81" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Audio"/>
                                 <connections>
                                     <action selector="playShortAudio" destination="BYZ-38-t0r" eventType="touchUpInside" id="gg9-Nb-VUb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-OV-wWp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-OV-wWp">
                                 <rect key="frame" x="274" y="81" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Music"/>
                                 <connections>
                                     <action selector="playMusic" destination="BYZ-38-t0r" eventType="touchUpInside" id="8uC-MQ-z0f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spu-GK-cVq">
-                                <rect key="frame" x="157" y="148" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spu-GK-cVq">
+                                <rect key="frame" x="167.5" y="148" width="40" height="30"/>
                                 <state key="normal" title="Video"/>
                                 <connections>
                                     <action selector="playVideo" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHC-BI-A04"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-Ef-QKJ">
+                                <rect key="frame" x="0.0" y="228" width="375" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UmS-Ef-QKJ" secondAttribute="height" multiplier="375:242" id="i9K-vp-ERZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iV-eP-PG9">
+                                <rect key="frame" x="97" y="587" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play by IJKPlayer"/>
+                                <connections>
+                                    <action selector="playByIjk" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUo-tk-5fo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nc3-S4-5Um" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="1lO-Gp-83j"/>
+                            <constraint firstItem="UmS-Ef-QKJ" firstAttribute="top" secondItem="spu-GK-cVq" secondAttribute="bottom" constant="50" id="7nK-Ll-kKQ"/>
+                            <constraint firstItem="UmS-Ef-QKJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KAm-Hi-3iG"/>
+                            <constraint firstItem="spu-GK-cVq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LnL-Pe-2E0"/>
+                            <constraint firstItem="QPA-OV-wWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="Sbo-bL-Njc"/>
+                            <constraint firstItem="spu-GK-cVq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="Z7l-dE-mhS"/>
+                            <constraint firstItem="UmS-Ef-QKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fB7-B9-I5d"/>
+                            <constraint firstItem="Nc3-S4-5Um" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="gga-L6-yRe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QPA-OV-wWp" secondAttribute="trailing" constant="60" id="xf2-hH-489"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="UmS-Ef-QKJ" id="aKH-95-3BD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

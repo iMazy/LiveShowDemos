@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		212FB7251F720C76004CCAA5 /* buyao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 219E28531F711C0E00AD9646 /* buyao.wav */; };
 		212FB7261F720C79004CCAA5 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 219E28511F7109E200AD9646 /* 309769.mp3 */; };
+		215E30101F721D08000D5F46 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E300F1F721CD2000D5F46 /* IJKMediaFramework.framework */; };
+		215E30111F721D08000D5F46 /* IJKMediaFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 215E300F1F721CD2000D5F46 /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		215E30151F721E20000D5F46 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E30141F721E20000D5F46 /* libz.tbd */; };
 		219E28401F71089D00AD9646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E283F1F71089D00AD9646 /* AppDelegate.swift */; };
 		219E28421F71089D00AD9646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E28411F71089D00AD9646 /* ViewController.swift */; };
 		219E28451F71089D00AD9646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219E28431F71089D00AD9646 /* Main.storyboard */; };
@@ -16,7 +19,23 @@
 		219E284A1F71089D00AD9646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219E28481F71089D00AD9646 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		215E30121F721D09000D5F46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				215E30111F721D08000D5F46 /* IJKMediaFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		215E300F1F721CD2000D5F46 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		215E30141F721E20000D5F46 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		219E283C1F71089C00AD9646 /* Audio&VideoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio&VideoPlay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		219E283F1F71089D00AD9646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		219E28411F71089D00AD9646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215E30151F721E20000D5F46 /* libz.tbd in Frameworks */,
+				215E30101F721D08000D5F46 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215E30131F721E20000D5F46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				215E30141F721E20000D5F46 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		219E28331F71089C00AD9646 = {
 			isa = PBXGroup;
 			children = (
+				215E300F1F721CD2000D5F46 /* IJKMediaFramework.framework */,
 				219E283E1F71089C00AD9646 /* Audio&VideoPlay */,
 				219E283D1F71089C00AD9646 /* Products */,
+				215E30131F721E20000D5F46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +157,7 @@
 				219E28381F71089C00AD9646 /* Sources */,
 				219E28391F71089C00AD9646 /* Frameworks */,
 				219E283A1F71089C00AD9646 /* Resources */,
+				215E30121F721D09000D5F46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +361,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Audio&VideoPlay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mazy.Audio-VideoPlay";
@@ -343,6 +379,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Audio&VideoPlay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mazy.Audio-VideoPlay";
