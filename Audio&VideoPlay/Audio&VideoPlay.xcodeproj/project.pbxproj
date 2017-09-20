@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212FB7251F720C76004CCAA5 /* buyao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 219E28531F711C0E00AD9646 /* buyao.wav */; };
+		212FB7261F720C79004CCAA5 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 219E28511F7109E200AD9646 /* 309769.mp3 */; };
 		219E28401F71089D00AD9646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E283F1F71089D00AD9646 /* AppDelegate.swift */; };
 		219E28421F71089D00AD9646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219E28411F71089D00AD9646 /* ViewController.swift */; };
 		219E28451F71089D00AD9646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219E28431F71089D00AD9646 /* Main.storyboard */; };
@@ -22,6 +24,27 @@
 		219E28461F71089D00AD9646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		219E28491F71089D00AD9646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		219E284B1F71089D00AD9646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		219E28511F7109E200AD9646 /* 309769.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 309769.mp3; sourceTree = "<group>"; };
+		219E28531F711C0E00AD9646 /* buyao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buyao.wav; sourceTree = "<group>"; };
+		219E28541F711C0E00AD9646 /* lose.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = lose.aac; sourceTree = "<group>"; };
+		219E28551F711C0E00AD9646 /* m_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_03.wav; sourceTree = "<group>"; };
+		219E28561F711C0E00AD9646 /* m_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_04.wav; sourceTree = "<group>"; };
+		219E28571F711C0E00AD9646 /* m_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_05.wav; sourceTree = "<group>"; };
+		219E28581F711C0E00AD9646 /* m_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_06.wav; sourceTree = "<group>"; };
+		219E28591F711C0E00AD9646 /* m_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_07.wav; sourceTree = "<group>"; };
+		219E285A1F711C0E00AD9646 /* m_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_08.wav; sourceTree = "<group>"; };
+		219E285B1F711C0E00AD9646 /* m_09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_09.wav; sourceTree = "<group>"; };
+		219E285C1F711C0E00AD9646 /* m_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_10.wav; sourceTree = "<group>"; };
+		219E285D1F711C0E00AD9646 /* m_11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_11.wav; sourceTree = "<group>"; };
+		219E285E1F711C0E00AD9646 /* m_12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_12.wav; sourceTree = "<group>"; };
+		219E285F1F711C0E00AD9646 /* m_13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_13.wav; sourceTree = "<group>"; };
+		219E28601F711C0E00AD9646 /* m_14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_14.wav; sourceTree = "<group>"; };
+		219E28611F711C0E00AD9646 /* m_15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_15.wav; sourceTree = "<group>"; };
+		219E28621F711C0E00AD9646 /* m_16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_16.wav; sourceTree = "<group>"; };
+		219E28631F711C0E00AD9646 /* m_17.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_17.wav; sourceTree = "<group>"; };
+		219E28641F711C0E00AD9646 /* normal.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.aac; sourceTree = "<group>"; };
+		219E28651F711C0E00AD9646 /* sendcard.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = sendcard.aac; sourceTree = "<group>"; };
+		219E28661F711C0E00AD9646 /* win.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.aac; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +80,40 @@
 				219E283F1F71089D00AD9646 /* AppDelegate.swift */,
 				219E28411F71089D00AD9646 /* ViewController.swift */,
 				219E28431F71089D00AD9646 /* Main.storyboard */,
+				219E28521F711C0E00AD9646 /* 斗地主音频 */,
 				219E28461F71089D00AD9646 /* Assets.xcassets */,
 				219E28481F71089D00AD9646 /* LaunchScreen.storyboard */,
+				219E28511F7109E200AD9646 /* 309769.mp3 */,
 				219E284B1F71089D00AD9646 /* Info.plist */,
 			);
 			path = "Audio&VideoPlay";
+			sourceTree = "<group>";
+		};
+		219E28521F711C0E00AD9646 /* 斗地主音频 */ = {
+			isa = PBXGroup;
+			children = (
+				219E28531F711C0E00AD9646 /* buyao.wav */,
+				219E28541F711C0E00AD9646 /* lose.aac */,
+				219E28551F711C0E00AD9646 /* m_03.wav */,
+				219E28561F711C0E00AD9646 /* m_04.wav */,
+				219E28571F711C0E00AD9646 /* m_05.wav */,
+				219E28581F711C0E00AD9646 /* m_06.wav */,
+				219E28591F711C0E00AD9646 /* m_07.wav */,
+				219E285A1F711C0E00AD9646 /* m_08.wav */,
+				219E285B1F711C0E00AD9646 /* m_09.wav */,
+				219E285C1F711C0E00AD9646 /* m_10.wav */,
+				219E285D1F711C0E00AD9646 /* m_11.wav */,
+				219E285E1F711C0E00AD9646 /* m_12.wav */,
+				219E285F1F711C0E00AD9646 /* m_13.wav */,
+				219E28601F711C0E00AD9646 /* m_14.wav */,
+				219E28611F711C0E00AD9646 /* m_15.wav */,
+				219E28621F711C0E00AD9646 /* m_16.wav */,
+				219E28631F711C0E00AD9646 /* m_17.wav */,
+				219E28641F711C0E00AD9646 /* normal.aac */,
+				219E28651F711C0E00AD9646 /* sendcard.aac */,
+				219E28661F711C0E00AD9646 /* win.aac */,
+			);
+			path = "斗地主音频";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212FB7261F720C79004CCAA5 /* 309769.mp3 in Resources */,
+				212FB7251F720C76004CCAA5 /* buyao.wav in Resources */,
 				219E284A1F71089D00AD9646 /* LaunchScreen.storyboard in Resources */,
 				219E28471F71089D00AD9646 /* Assets.xcassets in Resources */,
 				219E28451F71089D00AD9646 /* Main.storyboard in Resources */,
